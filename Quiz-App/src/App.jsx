@@ -7,21 +7,23 @@ import {
   Navigate,
 } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
- import Home from "./pages/Home";
+ import Home from "../pages/Home";
 
-// import Register from "./pages/register";
+ import Register from "../pages/Register";
 
 const App = () => {
   return (
-    <Router>
-      <Toaster />
-      <Routes>
-      <Routes path="/login" element={<Login />} />
-      {/* <Routes path="/register" element={<Register />} /> */}
-        <Route path="/home" element={<Home />} />
-        
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Toaster />
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Navigate to="/login" replace />} />
+           <Route path="/register" element={<Register />} /> 
+          <Route path="/home" element={<Home />} /> 
+        </Routes>
+      </Router>
+    </>
   );
 }
 
