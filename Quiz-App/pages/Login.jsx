@@ -20,7 +20,7 @@ const Login = () => {
             navigate("/home")
         }catch(err){
             setError(err.message)
-            toast.error(err.message)
+            toast.error("Invalid Email/Password")
         }
     }
   return (

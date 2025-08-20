@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
  import Home from "../pages/Home";
+ import "./index.css";
 
  import Register from "../pages/Register";
 
